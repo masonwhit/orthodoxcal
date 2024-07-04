@@ -7,17 +7,6 @@ import requests
 import os
 from requests_html import HTMLSession
 
-url = "https://www.holytrinityorthodox.com/calendar/calendar.php"
-
-try:
-    session = HTMLSession()
-    response = session.get(url)
-    
-except requests.exceptions.RequestException as e:
-    print(e)
-
-os.system('cls||clear')
-
 def find_passage(filename, book, chapter, start_verse, end_verse):
     try:
         with open(filename, 'r') as file:
@@ -37,6 +26,17 @@ def find_passage(filename, book, chapter, start_verse, end_verse):
             return "\n".join(result) if result else "Text not found."
     except FileNotFoundError:
         return "File not found."
+
+url = "https://www.holytrinityorthodox.com/calendar/calendar.php"
+
+try:
+    session = HTMLSession()
+    response = session.get(url)
+    
+except requests.exceptions.RequestException as e:
+    print(e)
+
+os.system('cls||clear')
 
 date = response.html.find('.pdataheader',first=True)
 date_fasting = response.html.find('.pheaderheader',first=True)
