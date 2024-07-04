@@ -2,3 +2,7 @@
 
 **Dependencies**
 - requests_html
+
+**Notes**
+
+These scripts were as much for learning as they were for doing anything useful. 
