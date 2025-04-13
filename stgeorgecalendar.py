@@ -18,6 +18,8 @@ church_calendar = response.html.find('.entry-content',first=True).text
 church_calendar = church_calendar.splitlines()
 os.system('cls||clear')
 
+#test
+
 #Father Daniel uses different date formats- just anticipate that.
 months = ['Jan','Jan.','January','Feb','Feb.','February','Mar','Mar.','March','Apr','Apr.','April','May.','May','Jun','Jun.','June','Jul','Jul.','July','Aug.','August','Aug.','Sep','Sept','Sep.','Sept.','September','Oct','Oct.','October','Nov','Nov.','November','Dec','Dec.','December']
 dates = []
